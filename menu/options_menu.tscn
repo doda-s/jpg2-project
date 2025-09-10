@@ -40,6 +40,8 @@ alignment = 1
 
 [node name="HSlider" type="HSlider" parent="Options/MenuOptions"]
 layout_mode = 2
+max_value = 1.0
+step = 0.05
 script = ExtResource("2_va5of")
 bus_audio_name = "BESTMUSICEVER"
 
@@ -48,3 +50,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/hover_pressed = SubResource("StyleBoxLine_wjlk6")
 text = "Return"
+
+[connection signal="value_changed" from="Options/MenuOptions/HSlider" to="Options" method="_on_h_slider_value_changed"]
+[connection signal="button_down" from="Options/MenuOptions/Return" to="Options" method="_on_return_button_down"]

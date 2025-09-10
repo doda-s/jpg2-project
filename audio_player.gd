@@ -6,6 +6,7 @@ func set_music_config(music: AudioStream, volume: float = 0.5):
 		
 	if volume_db != linear_to_db(volume):
 		_set_volume(linear_to_db(volume))
+		print("mudou valor: ",volume)
 	
 	return
 

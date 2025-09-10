@@ -7,3 +7,6 @@ func _ready():
 
 func _on_return_button_down():
 	SceneSwitcher.switch_scene("res://menu/start_menu.tscn")
+
+func _on_h_slider_value_changed(value: float) -> void:
+	AudioPlayer.set_music_config(menu_music,value)

@@ -48,3 +48,7 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Quit
 "
+
+[connection signal="button_down" from="StartMenu/MenuOptions/Start" to="StartMenu" method="_on_start_button_down"]
+[connection signal="button_down" from="StartMenu/MenuOptions/Options" to="StartMenu" method="_on_options_button_down"]
+[connection signal="button_down" from="StartMenu/MenuOptions/Quit" to="StartMenu" method="_on_quit_button_down"]
