@@ -15,6 +15,15 @@ run/main_scene="uid://05wdjxqdm5il"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
+[autoload]
+
+SceneSwitcher="*res://scripts/util/scene_switcher.gd"
+AudioPlayer="*res://scripts/util/audio_player.gd"
+
 [dotnet]
 
 project/assembly_name="JPG2 Project"
