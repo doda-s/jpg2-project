@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://db5btrpjhxm1h"]
+
+[ext_resource type="Script" uid="uid://bh1hwb7umeqcd" path="res://scripts/drag_object/grabbable_object.gd" id="1_ybleb"]
+[ext_resource type="Texture2D" uid="uid://snqeqgovlnv2" path="res://icon.svg" id="2_our0d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gy4av"]
+size = Vector2(128, 128)
+
+[node name="GrabbableObject" type="CharacterBody2D"]
+collision_layer = 2
+input_pickable = true
+script = ExtResource("1_ybleb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_our0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+shape = SubResource("RectangleShape2D_gy4av")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
