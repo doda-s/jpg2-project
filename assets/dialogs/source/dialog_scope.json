@@ -3,6 +3,7 @@
 		{
 			"Name": "dialog-demonstration-1",
 			"StartIn": "demo-greetings",
+			"EndIn": "farewell",
 			"DialogNodes": [
 				{
 					"ID": "demo-greetings",
@@ -46,6 +47,7 @@
 		{
 			"Name": "sign-demonstration",
 			"StartIn": "message-demonstration",
+			"EndIn": "message-demonstration",
 			"DialogNodes": [
 				{
 					"ID": "message-demonstration",
