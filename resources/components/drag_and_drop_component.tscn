@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw1h5j4mr726e"]
+
+[ext_resource type="Script" uid="uid://c0vjduec1mwx1" path="res://scripts/drag_object/drag_and_drop.gd" id="1_1hskc"]
+[ext_resource type="Script" uid="uid://tv2s5obq0b8n" path="res://scripts/drag_object/object_getter.gd" id="3_d1lvm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5l4hs"]
+radius = 6.32456
+
+[node name="DragAndDrop" type="Node2D"]
+script = ExtResource("1_1hskc")
+
+[node name="ObjectGetter" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("3_d1lvm")
+
+[node name="MouseArea" type="CollisionShape2D" parent="ObjectGetter"]
+shape = SubResource("CircleShape2D_5l4hs")

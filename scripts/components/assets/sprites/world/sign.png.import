@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu3s46h74qfpk"
-path="res://.godot/imported/ground-placeholder.png-39a925025d2b64902ba6c67f23520c0d.ctex"
+uid="uid://bpbtxtecmsv0j"
+path="res://.godot/imported/sign.png-24030c8334fe9199045a3fbc3aebdde6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/world/ground-placeholder.png"
-dest_files=["res://.godot/imported/ground-placeholder.png-39a925025d2b64902ba6c67f23520c0d.ctex"]
+source_file="res://scripts/components/assets/sprites/world/sign.png"
+dest_files=["res://.godot/imported/sign.png-24030c8334fe9199045a3fbc3aebdde6.ctex"]
 
 [params]
 

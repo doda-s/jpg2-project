@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctxxrosogbs0p"]
+
+[ext_resource type="PackedScene" uid="uid://dw1h5j4mr726e" path="res://resources/components/drag_and_drop_component.tscn" id="1_p2til"]
+[ext_resource type="Script" uid="uid://bh1hwb7umeqcd" path="res://scripts/drag_object/grabbable_object.gd" id="2_glekl"]
+[ext_resource type="Texture2D" uid="uid://16ow4yuq8f3e" path="res://scripts/components/assets/sprites/player/player_design.png" id="3_igcny"]
+[ext_resource type="Texture2D" uid="uid://snqeqgovlnv2" path="res://icon.svg" id="4_glekl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glekl"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcnuc"]
+size = Vector2(38, 18)
+
+[node name="DragAndDropDemo" type="Node2D"]
+
+[node name="DragAndDrop" parent="." instance=ExtResource("1_p2til")]
+
+[node name="GrabbableObject3" type="CharacterBody2D" parent="DragAndDrop"]
+position = Vector2(400, 234)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("2_glekl")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="Sprite2D" type="Sprite2D" parent="DragAndDrop/GrabbableObject3"]
+position = Vector2(7.15256e-07, 0)
+texture = ExtResource("4_glekl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/GrabbableObject3"]
+shape = SubResource("RectangleShape2D_glekl")
+
+[node name="GrabbableObject2" type="CharacterBody2D" parent="DragAndDrop"]
+position = Vector2(400, 234)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("2_glekl")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="Sprite2D" type="Sprite2D" parent="DragAndDrop/GrabbableObject2"]
+position = Vector2(7.15256e-07, 0)
+texture = ExtResource("3_igcny")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/GrabbableObject2"]
+light_mask = 2
+shape = SubResource("RectangleShape2D_lcnuc")
+
+[node name="GrabbableObject" type="CharacterBody2D" parent="DragAndDrop"]
+position = Vector2(200, 117)
+collision_mask = 2
+input_pickable = true
+script = ExtResource("2_glekl")
+metadata/_custom_type_script = "uid://bh1hwb7umeqcd"
+
+[node name="Sprite2D" type="Sprite2D" parent="DragAndDrop/GrabbableObject"]
+position = Vector2(7.15256e-07, 0)
+texture = ExtResource("4_glekl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragAndDrop/GrabbableObject"]
+shape = SubResource("RectangleShape2D_glekl")
+
+[connection signal="mouse_entered" from="DragAndDrop/GrabbableObject3" to="DragAndDrop/GrabbableObject3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/GrabbableObject3" to="DragAndDrop/GrabbableObject3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="DragAndDrop/GrabbableObject2" to="DragAndDrop/GrabbableObject2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/GrabbableObject2" to="DragAndDrop/GrabbableObject2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="DragAndDrop/GrabbableObject" to="DragAndDrop/GrabbableObject" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="DragAndDrop/GrabbableObject" to="DragAndDrop/GrabbableObject" method="_on_mouse_exited"]
