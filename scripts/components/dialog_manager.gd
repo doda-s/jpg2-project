@@ -4,7 +4,7 @@ class_name DialogManager
 # The DialogManager is responsible for managing the dialog nodes of a context.
 # This context is received through a DialogHandler.
 
-var _current_dialog: String = ""
+var _current_dialog: String
 var _dialogs: Array
 var _dialog_node_count: int
 var _dialog_view: DialogView
@@ -18,6 +18,7 @@ func _ready() -> void:
 
 func init_dialog(ctx: Dictionary) -> void:
 	# Initializes and prepares dialog nodes
+	_current_dialog = ""
 	_dialog_node_count = ctx.DialogNodes.size()
 	_dialogs = ctx.DialogNodes
 	_start_in = ctx.StartIn
