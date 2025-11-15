@@ -16,11 +16,10 @@ func _process(delta):
 
 # exemplo de como poderam ser inicializados
 func _ready():
-	var objects = get_children()
+	var grabable_object_list = get_tree().get_nodes_in_group("grabbable_objects_group")
 	# adiciona items grabable na lista de ordenação
-	for obj in objects:
-		if obj.get_class() == "CharacterBody2D":
-			add_grab_object(obj)
+	for obj in grabable_object_list:
+		add_grab_object(obj)
 
 func add_grab_object(grab_object):
 	grab_object_stack.append(grab_object)

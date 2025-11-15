@@ -8,7 +8,6 @@ var currentSelectArea: String
 func _process(delta):
 	if !mouse_in: return
 	
-
 	if int(Input.is_action_just_pressed("mouse_click")):
 		print("clicou: ", currentSelectArea)
 		var all = get_tree().get_nodes_in_group("relevant_area_group")
@@ -33,12 +32,12 @@ func _on_child_mouse_entered(areaName: String):
 		return
 
 	currentSelectArea = areaName
+	print("areaName: ", areaName)
 	mouse_in = true
-	print("_on_child_mouse_entered")
+	print(mouse_in)
 	pass
 
 func _on_child_mouse_exited():
 	currentSelectArea = ""
 	mouse_in = false
-	print("_on_child_mouse_exited")
 	pass
